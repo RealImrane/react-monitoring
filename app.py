@@ -1,11 +1,11 @@
-import os
-import sqlite3
 import streamlit as st
+import sqlite3
 import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
 import json
+import os
 
 # ─────────────────────────────────────────────
 # CONFIG
@@ -17,7 +17,7 @@ st.set_page_config(
     initial_sidebar_state="expanded"
 )
 
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+BASE_DIR  = os.path.dirname(__file__)
 DB_PATH   = os.path.join(BASE_DIR, 'data', 'REACT_v3.db')
 STATS_PATH = os.path.join(BASE_DIR, 'data', 'analysis_results.json')
 
@@ -33,13 +33,18 @@ METAL_COLOURS = {
 # ─────────────────────────────────────────────
 # DATABASE HELPERS
 # ─────────────────────────────────────────────
-@st.cache_resource
 def get_conn():
+    if not os.path.exists(DB_PATH):
+        st.error(f"Database file not found. Expected path: {DB_PATH}")
+        st.stop()
     return sqlite3.connect(DB_PATH, check_same_thread=False)
 
 @st.cache_data
 def load_sites():
-    return pd.read_sql("SELECT * FROM sites", get_conn())
+    conn = get_conn()
+    df = pd.read_sql("SELECT * FROM sites", conn)
+    conn.close()
+    return df
 
 @st.cache_data
 def load_measurements():
@@ -58,7 +63,9 @@ def load_measurements():
     JOIN contaminants c      ON m.contaminant_id  = c.contaminant_id
     ORDER BY se.date, se.site_id
     """
-    df = pd.read_sql(query, get_conn())
+    conn = get_conn()
+    df = pd.read_sql(query, conn)
+    conn.close()
     df['date'] = pd.to_datetime(df['date'])
     return df
 
@@ -71,7 +78,9 @@ def load_env_readings():
     JOIN sampling_events se ON er.event_id    = se.event_id
     JOIN parameters p       ON er.parameter_id = p.parameter_id
     """
-    df = pd.read_sql(query, get_conn())
+    conn = get_conn()
+    df = pd.read_sql(query, conn)
+    conn.close()
     df['date'] = pd.to_datetime(df['date'])
     return df
 
