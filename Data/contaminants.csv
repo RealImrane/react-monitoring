@@ -1,0 +1,5 @@
+contaminant_id,contaminant_name,symbol,unit,contaminant_type,cas_number
+Pb,Lead,Pb,µg/L,heavy metal,
+Cd,Cadmium,Cd,µg/L,heavy metal,
+Cu,Copper,Cu,µg/L,heavy metal,
+Zn,Zinc,Zn,µg/L,heavy metal,

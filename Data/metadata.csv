@@ -1,0 +1,24 @@
+key,value
+title,"REACT Project – Heavy Metal Monitoring Dataset, Brskovo, Montenegro"
+creator,"CETI – Centre for Ecotoxicological Research, Podgorica"
+project,REACT (Remote Environmental Assessment and Continuous Metal Tracking)
+programme,iMERMAID Horizon Europe FSTP
+start_date,2025-07-28
+end_date,2026-02-10
+sites,"SP1 (Tara upstream), SP2 (Tara downstream), SP3 (Rudnica River), SP4 (Tunnel), SP5 (Open-pit Brskovo)"
+parameters,"Pb, Cd, Cu, Zn (total & dissolved); pH, conductivity, turbidity, temperature, pressure, humidity, wind"
+methods,ICP-MS (accredited lab); HMS iMERMAID electrochemical sensor
+units,Metal concentrations in µg/L; temperature in °C; conductivity in µS/cm; turbidity in NTU
+bdl_handling,BDL values replaced with ½ LOD; original BDL flagged in is_bdl column
+license,CC BY 4.0 – Attribution required
+contact,"CETI, Podgorica, Montenegro"
+language,English
+version,3.0
+created,2026-04-01
+fair_findable,"Unique site IDs, protocol numbers, and date-based keys"
+fair_accessible,SQLite open-format database; no proprietary software required
+fair_interoperable,"Standard column names, SI units, ISO 8601 dates, WGS84 coordinates"
+fair_reusable,Full provenance recorded; LOD values documented; BDL flags preserved
+schema_updated,2026-04-06
+schema_changes_v2,metals→contaminants (generalised); fractions lookup table added; devices table added; device_id FK on measurements; fraction_id FK on measurements
+schema_changes_v3,measured_at (nullable) added to measurements; parameters lookup table added; environmental_readings table added (long format); sampling_events slimmed to identifiers only

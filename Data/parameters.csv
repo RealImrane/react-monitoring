@@ -1,0 +1,10 @@
+parameter_id,parameter_name,unit,category,description
+water_temp,Water Temperature,°C,physicochemical,Temperature of water at the sampling point
+ph,pH,-,physicochemical,Acidity/alkalinity of water sample
+conductivity,Conductivity,µS/cm,physicochemical,Electrical conductivity of water sample
+turbidity,Turbidity,NTU,physicochemical,Turbidity of water measured in nephelometric turbidity units
+ambient_temp,Ambient Temperature,°C,meteorological,Air temperature at time of sampling
+pressure,Ambient Pressure,mbar,meteorological,Atmospheric pressure at time of sampling
+humidity,Humidity,%,meteorological,Relative humidity at time of sampling
+wind_speed,Wind Speed,m/s,meteorological,Wind speed at time of sampling
+weather_desc,Weather Description,text,meteorological,Qualitative description of weather conditions

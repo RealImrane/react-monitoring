@@ -1,0 +1,6 @@
+site_id,site_name,latitude,longitude,matrix_type,description
+SP1,Tara River upstream from the confluence with the Rudnica River,42.9328,19.572944,river,"Upstream reference point on Tara River, upstream of Rudnica confluence"
+SP2,Tara River downstream from the confluence with the Rudnica River,42.955708,19.578908,river,Tara River downstream of Rudnica confluence – receives mine-influenced water
+SP3,Rudnica River,42.957394,19.576575,river,Rudnica River – tributary strongly influenced by acid mine drainage
+SP4,Tunnel – former underground ore transport,42.958186,19.604072,tunnel,"Former ore-transport tunnel; high conductivity, groundwater influenced"
+SP5,Former open-pit lead and zinc mine (Brskovo),42.949603,19.626297,open-pit,"Open-pit lake; pH ~3, conductivity 2000–3000 µS/cm, extreme metal loads"

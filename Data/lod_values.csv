@@ -1,0 +1,13 @@
+contaminant_id,fraction_id,method_id,lod,half_lod
+Pb,total,ICP-MS,0.06,0.03
+Pb,dissolved,ICP-MS,0.06,0.03
+Cd,total,ICP-MS,0.01,0.005
+Cd,dissolved,ICP-MS,0.01,0.005
+Cu,total,ICP-MS,0.1,0.05
+Cu,dissolved,ICP-MS,0.1,0.05
+Zn,total,ICP-MS,1.0,0.5
+Zn,dissolved,ICP-MS,1.0,0.5
+Pb,dissolved,HMS,3.5,1.75
+Cd,dissolved,HMS,7.0,3.5
+Cu,dissolved,HMS,3.0,1.5
+Zn,dissolved,HMS,25.0,12.5

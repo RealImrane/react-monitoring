@@ -1,0 +1,3 @@
+device_id,device_code,method_id,model,manufacturer,description
+DEV001,HMS-REACT-01,HMS,iMERMAID Electrochemical Sensor v1,iMERMAID Consortium,"Electrochemical sensor deployed at Brskovo site for REACT project; detects dissolved Pb, Cd, Cu, Zn"
+DEV002,ICPMS-CETI-01,ICP-MS,ICP-MS Laboratory Instrument,CETI Laboratory,"Accredited ICP-MS instrument at CETI laboratory, Podgorica; used for total and dissolved metal analysis"

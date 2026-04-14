@@ -1,0 +1,3 @@
+fraction_id,fraction_name,description
+total,Total,Total contaminant concentration including both dissolved and particulate forms; measured after acid digestion
+dissolved,Dissolved,Dissolved contaminant fraction only; measured after 0.45µm membrane filtration
